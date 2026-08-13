@@ -1,45 +1,255 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%" fill="none">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1e2f">
-        <animate attributeName="stop-color" values="#1e1e2f;#2c2c54;#1e1e2f" dur="10s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#0f0c29">
-        <animate attributeName="stop-color" values="#0f0c29;#24243e;#0f0c29" dur="10s" repeatCount="indefinite" />
-      </stop>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#060911" />
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+
+    <!-- Border Gradient -->
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#818cf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Ambient Glow Gradients -->
+    <radialGradient id="glow-cyan" cx="20%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-emerald" cx="80%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-indigo" cx="85%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Silicon Core Gradient -->
+    <linearGradient id="core-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Chart Fill Gradient -->
+    <linearGradient id="chart-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Subtle Dot Pattern -->
+    <pattern id="dot-pattern" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
+    </pattern>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid-pattern" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4" />
+    </pattern>
   </defs>
-  <rect width="800" height="200" fill="url(#bg)" rx="15" />
-  
-  <g opacity="0.3">
-    <!-- Animated background grid -->
-    <path d="M0,50 L800,50 M0,100 L800,100 M0,150 L800,150" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="10,5">
-      <animate attributeName="stroke-dashoffset" values="0;15" dur="3s" repeatCount="indefinite" />
-    </path>
-    <path d="M100,0 L100,200 M200,0 L200,200 M300,0 L300,200 M400,0 L400,200 M500,0 L500,200 M600,0 L600,200 M700,0 L700,200" stroke="#ffffff" stroke-width="0.5" />
+
+  <!-- Card Background with Rounded Corners -->
+  <rect x="2" y="2" width="1196" height="336" rx="16" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5" />
+
+  <!-- Ambient Glows -->
+  <rect x="2" y="2" width="1196" height="336" rx="16" fill="url(#glow-cyan)" />
+  <rect x="2" y="2" width="1196" height="336" rx="16" fill="url(#glow-emerald)" />
+  <rect x="2" y="2" width="1196" height="336" rx="16" fill="url(#glow-indigo)" />
+
+  <!-- Background Patterns -->
+  <rect x="2" y="2" width="1196" height="336" rx="16" fill="url(#grid-pattern)" />
+  <rect x="2" y="2" width="1196" height="336" rx="16" fill="url(#dot-pattern)" />
+
+  <!-- Subtle Circuit Line Traces in Background -->
+  <g opacity="0.35" stroke="#0ea5e9" stroke-width="1" fill="none">
+    <path d="M 0 100 L 120 100 L 160 140 L 220 140" />
+    <circle cx="220" cy="140" r="2.5" fill="#38bdf8" />
+    <path d="M 40 338 L 80 298 L 180 298" />
+    <circle cx="180" cy="298" r="2" fill="#38bdf8" />
+    <path d="M 1198 220 L 1140 220 L 1100 180" />
+    <circle cx="1100" cy="180" r="2.5" fill="#34d399" />
   </g>
 
-  <g transform="translate(400, 100)">
-    <circle cx="0" cy="0" r="40" fill="none" stroke="#00f2fe" stroke-width="2" filter="url(#glow)">
-      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
-    </circle>
+  <!-- ================= LEFT / HERO TEXT SECTION ================= -->
+
+  <!-- Category Tag / Badge -->
+  <g transform="translate(60, 38)">
+    <rect width="280" height="28" rx="14" fill="#082f49" fill-opacity="0.85" stroke="#0284c7" stroke-width="1.2" />
+    <circle cx="14" cy="14" r="4" fill="#38bdf8" />
+    <text x="26" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1">⚡ CURATED FINOPS &amp; AI INFRA ECOSYSTEM</text>
   </g>
 
-  <!-- Title Text -->
-  <text x="400" y="90" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="url(#glow)">
-    Awesome GPU Cost Optimization
-  </text>
-  
-  <!-- Subtitle Text -->
-  <text x="400" y="130" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#4facfe" text-anchor="middle">
-    Navigating AI Infrastructure Spend & FinOps
-  </text>
+  <!-- Main Repository Title -->
+  <text x="60" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Awesome GPU Cost Optimization</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="400" fill="#94a3b8">Cloud Spend Visibility • Kubernetes Allocation • Rightsizing • AI Infrastructure FinOps</text>
+
+  <!-- Feature Chips / Tags - Row 1 -->
+  <g transform="translate(60, 174)">
+    <!-- Chip 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="168" height="32" rx="7" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <text x="12" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">☁️ SaaS GPU Clouds</text>
+    </g>
+
+    <!-- Chip 2 -->
+    <g transform="translate(178, 0)">
+      <rect width="188" height="32" rx="7" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <text x="12" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">☸️ Kubernetes FinOps</text>
+    </g>
+
+    <!-- Chip 3 -->
+    <g transform="translate(376, 0)">
+      <rect width="190" height="32" rx="7" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <text x="12" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">📉 Workload Rightsizing</text>
+    </g>
+  </g>
+
+  <!-- Feature Chips / Tags - Row 2 -->
+  <g transform="translate(60, 216)">
+    <!-- Chip 4 -->
+    <g transform="translate(0, 0)">
+      <rect width="198" height="32" rx="7" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <text x="12" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">⚡ Real-Time Telemetry</text>
+    </g>
+
+    <!-- Chip 5 -->
+    <g transform="translate(208, 0)">
+      <rect width="186" height="32" rx="7" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <text x="12" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">💰 FOCUS Specification</text>
+    </g>
+
+    <!-- Chip 6 -->
+    <g transform="translate(404, 0)">
+      <rect width="162" height="32" rx="7" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <text x="12" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">🚀 Open-Source Hub</text>
+    </g>
+  </g>
+
+  <!-- Footer Metadata Bar -->
+  <g transform="translate(60, 282)">
+    <circle cx="6" cy="6" r="4" fill="#10b981" />
+    <circle cx="6" cy="6" r="8" fill="none" stroke="#10b981" stroke-width="1" opacity="0.4" />
+    <text x="22" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#64748b">Built for Platform Engineers, FinOps Practitioners &amp; MLOps Teams</text>
+  </g>
+
+  <!-- ================= RIGHT / GPU & TELEMETRY DASHBOARD ================= -->
+
+  <!-- Top Floating Badge -->
+  <g transform="translate(710, 28)">
+    <rect width="130" height="24" rx="12" fill="#042f2e" stroke="#14b8a6" stroke-width="1" />
+    <circle cx="12" cy="12" r="3" fill="#2dd4bf" />
+    <text x="22" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#2dd4bf" letter-spacing="0.5">FINOPS READY</text>
+  </g>
+
+  <!-- Main Telemetry Card Frame -->
+  <g transform="translate(720, 48)">
+    <!-- Base Card -->
+    <rect width="420" height="246" rx="14" fill="#0b1120" fill-opacity="0.9" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Window Top Header Bar -->
+    <rect width="420" height="36" rx="14" fill="#0f172a" fill-opacity="0.8" />
+    <path d="M 0 36 L 420 36" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- Window Controls -->
+    <circle cx="18" cy="18" r="4.5" fill="#ef4444" fill-opacity="0.75" />
+    <circle cx="32" cy="18" r="4.5" fill="#eab308" fill-opacity="0.75" />
+    <circle cx="46" cy="18" r="4.5" fill="#22c55e" fill-opacity="0.75" />
+    
+    <!-- Header Title -->
+    <text x="64" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#64748b">GPU-TELEMETRY // CLUSTER-01</text>
+    
+    <!-- Live Status Pill -->
+    <g transform="translate(340, 9)">
+      <rect width="64" height="18" rx="4" fill="#064e3b" fill-opacity="0.6" stroke="#10b981" stroke-width="0.8" />
+      <circle cx="8" cy="9" r="2.5" fill="#34d399" />
+      <text x="16" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#34d399">ACTIVE</text>
+    </g>
+
+    <!-- Left Column: GPU Silicon Processor Die -->
+    <g transform="translate(18, 50)">
+      <!-- Outer Die Package -->
+      <rect width="144" height="178" rx="10" fill="#090e1a" stroke="#0284c7" stroke-width="1.2" />
+
+      <!-- Top HBM Memory Modules -->
+      <rect x="24" y="10" width="42" height="16" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+      <rect x="78" y="10" width="42" height="16" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+      <text x="45" y="21.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="600" fill="#94a3b8" text-anchor="middle">HBM3</text>
+      <text x="99" y="21.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="600" fill="#94a3b8" text-anchor="middle">HBM3</text>
+
+      <!-- Bottom HBM Memory Modules -->
+      <rect x="24" y="152" width="42" height="16" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+      <rect x="78" y="152" width="42" height="16" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+      <text x="45" y="163.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="600" fill="#94a3b8" text-anchor="middle">HBM3</text>
+      <text x="99" y="163.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="600" fill="#94a3b8" text-anchor="middle">HBM3</text>
+
+      <!-- Left / Right Memory Modules -->
+      <rect x="8" y="44" width="14" height="40" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+      <rect x="8" y="94" width="14" height="40" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+      <rect x="122" y="44" width="14" height="40" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+      <rect x="122" y="94" width="14" height="40" rx="2" fill="#1e293b" stroke="#0ea5e9" stroke-width="0.8" />
+
+      <!-- Center AI Compute Die -->
+      <rect x="30" y="36" width="84" height="106" rx="6" fill="url(#core-grad)" stroke="#38bdf8" stroke-width="1.2" />
+
+      <!-- Micro-circuit patterns inside die -->
+      <g stroke="#38bdf8" stroke-width="0.5" opacity="0.4" fill="none">
+        <path d="M 40 46 L 60 46 L 60 60" />
+        <path d="M 104 46 L 84 46 L 84 60" />
+        <path d="M 40 132 L 60 132 L 60 118" />
+        <path d="M 104 132 L 84 132 L 84 118" />
+      </g>
+
+      <!-- Center Die Labels -->
+      <text x="72" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">AI CORE</text>
+      <text x="72" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#38bdf8" text-anchor="middle">98.4% UTIL</text>
+      <rect x="44" y="104" width="56" height="18" rx="3" fill="#0369a1" fill-opacity="0.5" stroke="#38bdf8" stroke-width="0.6" />
+      <text x="72" y="116.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#e0f2fe" text-anchor="middle">OPTIMIZED</text>
+    </g>
+
+    <!-- Right Column: FinOps Metrics & Cost Optimization Curve -->
+    <g transform="translate(180, 50)">
+      <!-- Metric: Spend Reduction -->
+      <text x="0" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" letter-spacing="0.5">MONTHLY SPEND REDUCTION</text>
+      <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#10b981">-58.4%</text>
+      <text x="96" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#34d399">($18,400/mo)</text>
+
+      <!-- Sparkline Cost Chart Container -->
+      <g transform="translate(0, 50)">
+        <rect width="222" height="74" rx="6" fill="#090e1a" stroke="#1e293b" stroke-width="1" />
+        
+        <!-- Chart Grid Lines -->
+        <line x1="8" y1="24" x2="214" y2="24" stroke="#1e293b" stroke-dasharray="3,3" stroke-width="0.8" />
+        <line x1="8" y1="48" x2="214" y2="48" stroke="#1e293b" stroke-dasharray="3,3" stroke-width="0.8" />
+
+        <!-- Downward Cost Reduction Curve -->
+        <path d="M 12 20 C 40 18, 70 38, 100 32 C 130 26, 160 54, 210 52 L 210 70 L 12 70 Z" fill="url(#chart-grad)" />
+        <path d="M 12 20 C 40 18, 70 38, 100 32 C 130 26, 160 54, 210 52" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" />
+
+        <!-- Target Data Point Marker -->
+        <circle cx="210" cy="52" r="3.5" fill="#10b981" />
+        <circle cx="210" cy="52" r="6.5" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6" />
+      </g>
+
+      <!-- Auto-Scaling Status Badge -->
+      <g transform="translate(0, 134)">
+        <rect width="222" height="34" rx="6" fill="#090e1a" stroke="#1e293b" stroke-width="1" />
+        <circle cx="14" cy="17" r="3.5" fill="#38bdf8" />
+        <text x="26" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#94a3b8">Auto-Scaled: <tspan fill="#38bdf8" font-weight="700">Spot &amp; Fractional GPUs</tspan></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Right Floating Badge -->
+  <g transform="translate(980, 282)">
+    <rect width="145" height="24" rx="12" fill="#1e1b4b" stroke="#818cf8" stroke-width="1" />
+    <circle cx="12" cy="12" r="3" fill="#a5b4fc" />
+    <text x="22" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#a5b4fc" letter-spacing="0.5">FOCUS 1.0 COMPLIANT</text>
+  </g>
 </svg>
