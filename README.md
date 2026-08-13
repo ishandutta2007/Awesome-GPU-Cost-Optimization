@@ -50,7 +50,7 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## 💻 Open-Source GitHub Projects
 
-| Project | Stars | Description |
+| Project | Github_Stars | Description |
 |---------|-------|-------------|
 | **[Infracost](https://github.com/infracost/infracost)** | [![Stars](https://img.shields.io/github/stars/infracost/infracost?style=social&color=white)](https://github.com/infracost/infracost/stargazers) | Open-source tool that estimates cloud infrastructure costs from Terraform (and other IaC) before deployment, enabling shift-left FinOps. |
 | **[Karpenter](https://github.com/aws/karpenter-provider-aws)** | [![Stars](https://img.shields.io/github/stars/aws/karpenter-provider-aws?style=social&color=white)](https://github.com/aws/karpenter-provider-aws/stargazers) | Flexible, high-performance Kubernetes cluster autoscaler that drastically optimizes compute instances and associated cloud costs. |
