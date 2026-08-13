@@ -40,64 +40,18 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-- **[Cast AI](https://cast.ai/)**  
-
-  Automated Kubernetes cost optimization platform with rightsizing, autoscaling, spot instance management, and strong GPU workload support.
-
-
-
-- **[Run:AI](https://www.run.ai/)**  
-
-  AI infrastructure platform focused on GPU orchestration, fractionalization, scheduling, and utilization optimization for training and inference.
-
-
-
-- **[Zesty](https://zesty.co/)**  
-
-  Cloud cost optimization solution that automatically rightsizes and manages cloud resources, including compute and storage efficiencies.
-
-
-
-- **[TensorDock](https://tensordock.com/)**  
-
-  GPU cloud marketplace with flexible instance configuration and cost-focused pricing for development and training workloads.
-
-
-
-- **[CoreWeave Cost Explorer](https://www.coreweave.com/)**  
-
-  Native cost visibility and analytics tools within CoreWeave’s GPU-specialized cloud for large-scale AI training and inference.
-
-
-
-- **[Nebius Cost Analytics](https://nebius.com/)**  
-
-  Cost monitoring and analytics features in the Nebius AI cloud platform for tracking GPU and AI infrastructure spend.
-
-
-
-- **[Fluidstack Cost Insights](https://www.fluidstack.io/)**  
-
-  Cost visibility and optimization insights for Fluidstack’s aggregated GPU cloud and private cluster offerings.
-
-
-
-- **[Crusoe Cost Manager](https://www.crusoeenergy.com/)**  
-
-  Cost management capabilities within Crusoe’s energy-efficient GPU cloud for sustainable high-performance computing.
-
-
-
-- **[RunPod Billing](https://www.runpod.io/)**  
-
-  Transparent billing and usage analytics for RunPod’s GPU cloud, community, and serverless offerings.
-
-
-
-- **[Modal Usage Analytics](https://modal.com/)**  
-
-  Built-in usage tracking and cost visibility for Modal’s serverless GPU platform that bills per second of compute.
-
+| Product | Description | Pricing | Free tier limit |
+|---|---|---|---|
+| **[Cast AI](https://cast.ai/)** | Automated Kubernetes cost optimization platform with rightsizing, autoscaling, spot instance management, and strong GPU workload support. | Starts at $0/month for monitoring, Growth plan starts at $1,000/month plus per-CPU fee | Unlimited Kubernetes clusters for cost monitoring and analysis. |
+| **[Run:AI](https://www.run.ai/)** | AI infrastructure platform focused on GPU orchestration, fractionalization, scheduling, and utilization optimization for training and inference. | Starts at approx. $2,600 per GPU annually for a 12-month contract | Free trial available for enterprise customers upon request; no permanent free tier. |
+| **[Zesty](https://zesty.co/)** | Cloud cost optimization solution that automatically rightsizes and manages cloud resources, including compute and storage efficiencies. | Percentage of realized cloud cost savings, starts at $0 upfront | Free initial cost assessment and ROI projection available before commitment. |
+| **[TensorDock](https://tensordock.com/)** | GPU cloud marketplace with flexible instance configuration and cost-focused pricing for development and training workloads. | Starts at ~$0.12/hr for consumer GPUs, minimum $5 deposit | No permanent free tier. Discounts available for students, researchers, and FOSS projects. |
+| **[CoreWeave Cost Explorer](https://www.coreweave.com/)** | Native cost visibility and analytics tools within CoreWeave’s GPU-specialized cloud for large-scale AI training and inference. | Billed per node-hour (often requires minimum 8-GPU nodes) | Trial credits of $25 to $100 available upon request for production setups. |
+| **[Nebius Cost Analytics](https://nebius.com/)** | Cost monitoring and analytics features in the Nebius AI cloud platform for tracking GPU and AI infrastructure spend. | Pay-as-you-go with a typical $25 minimum deposit | Builder Program preview offers $25 credits; startup program offers up to $150,000 in credits. |
+| **[Fluidstack Cost Insights](https://www.fluidstack.io/)** | Cost visibility and optimization insights for Fluidstack’s aggregated GPU cloud and private cluster offerings. | Billed hourly for on-demand or monthly/annual for reserved instances | Does not offer free tier or free trial. Premium enterprise platform. |
+| **[Crusoe Cost Manager](https://www.crusoeenergy.com/)** | Cost management capabilities within Crusoe’s energy-efficient GPU cloud for sustainable high-performance computing. | Billed hourly (on-demand and spot instances available) | Does not offer free tier or free trial. |
+| **[RunPod Billing](https://www.runpod.io/)** | Transparent billing and usage analytics for RunPod’s GPU cloud, community, and serverless offerings. | Billed per second for compute | Startup program provides $1,000 credit package (Starter Tier). |
+| **[Modal Usage Analytics](https://modal.com/)** | Built-in usage tracking and cost visibility for Modal’s serverless GPU platform that bills per second of compute. | Billed per second; Team plan starts at $250/month base + compute | Starter plan provides $30 in free compute credits every month. |
 
 
 ## Open-Source GitHub Projects
